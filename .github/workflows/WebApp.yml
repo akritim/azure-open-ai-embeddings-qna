@@ -2,7 +2,7 @@ name: WebApp Docker Image
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "akriti-patch-1" ]
 
 jobs:
 
