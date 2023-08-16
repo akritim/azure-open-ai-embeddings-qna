@@ -54,6 +54,7 @@ try :
     if st.session_state.chat_askedquestion:
         st.session_state['chat_question'] = st.session_state.chat_askedquestion
         st.session_state.chat_askedquestion = ""
+        st.session_state['chat_question'] = st.session_state['chat_question'].append("Summarize the following text into bullet points:\n\n{}\n\nSummary:")
         st.session_state['chat_question'], result, context, sources = llm_helper.get_semantic_answer_lang_chain(st.session_state['chat_question'], st.session_state['chat_history'])    
         result, chat_followup_questions_list = llm_helper.extract_followupquestions(result)
         st.session_state['chat_history'].append((st.session_state['chat_question'], result))
