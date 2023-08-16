@@ -21,12 +21,12 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build the Docker image
       run: 
-       docker build . --file WebApp.Dockerfile --tag akritim/oai-embeddings:$(date +'%Y-%m-%d')_$GITHUB_RUN_NUMBER;
-       docker tag akritim/oai-embeddings:$(date +'%Y-%m-%d')_$GITHUB_RUN_NUMBER akritim/oai-embeddings:latest;
-       docker push akritim/oai-embeddings:$(date +'%Y-%m-%d')_$GITHUB_RUN_NUMBER;
-       docker push akritim/oai-embeddings:latest;
+       docker build . --file WebApp.Dockerfile --tag akritimehta12/oai-embeddings:$(date +'%Y-%m-%d')_$GITHUB_RUN_NUMBER;
+       docker tag akritimehta12/oai-embeddings:$(date +'%Y-%m-%d')_$GITHUB_RUN_NUMBER akritimehta12/oai-embeddings:latest;
+       docker push akritimehta12/oai-embeddings:$(date +'%Y-%m-%d')_$GITHUB_RUN_NUMBER;
+       docker push akritimehta12/oai-embeddings:latest;
         
-       docker build . --file BatchProcess.Dockerfile --tag akritim/oai-batch:$(date +'%Y-%m-%d')_$GITHUB_RUN_NUMBER;
-       docker tag akritim/oai-batch:$(date +'%Y-%m-%d')_$GITHUB_RUN_NUMBER akritim/oai-batch:latest;
-       docker push akritim/oai-batch:$(date +'%Y-%m-%d')_$GITHUB_RUN_NUMBER;
-       docker push akritim/oai-batch:latest;
+       docker build . --file BatchProcess.Dockerfile --tag akritimehta12/oai-batch:$(date +'%Y-%m-%d')_$GITHUB_RUN_NUMBER;
+       docker tag akritimehta12/oai-batch:$(date +'%Y-%m-%d')_$GITHUB_RUN_NUMBER akritimehta12/oai-batch:latest;
+       docker push akritimehta12/oai-batch:$(date +'%Y-%m-%d')_$GITHUB_RUN_NUMBER;
+       docker push akritimehta12/oai-batch:latest;
